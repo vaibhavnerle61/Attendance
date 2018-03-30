@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vaibhav.fuelpost.fragmemts.MonthlyFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+
+            </android.support.v7.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/txttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txthour"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/txthour"
+                android:layout_toStartOf="@+id/txthour"
+                android:text="41:45"
+                android:textColor="@color/whitecolor"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txthour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="16dp"
+                android:text="Hour"
+                android:textSize="25sp"
+                />
+
+            <TextView
+                android:id="@+id/txtmonthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/txttime"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:text="Monthly"
+                android:textColor="@color/whitecolor"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txthour"
+                android:layout_toEndOf="@+id/txttime"
+                android:layout_toRightOf="@+id/txttime"
+                android:text="Working"
+                android:id="@+id/txtworking" />
+
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txttime"
+                android:layout_alignStart="@+id/txttime"
+                android:layout_below="@+id/txtworking"
+                android:text="06" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/txthour"
+                android:layout_alignRight="@+id/txthour"
+                android:layout_below="@+id/txtworking"
+                android:text="Hrs are remaining" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/toolbarcolor">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="March 2018"
+                android:textColor="@color/colorPrimary"
+
+                />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+</FrameLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+<ImageView
+    android:id="@+id/imgclockin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_clock_in_arrow" />
+
+    <TextView
+        android:id="@+id/txtclockin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_toEndOf="@+id/imgclockin"
+        android:layout_toRightOf="@+id/imgclockin"
+        android:text="10:11 AM"
+        android:textColor="@color/black_overlay"
+        />
+
+    <ImageView
+        android:id="@+id/imgclockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_toLeftOf="@+id/txtclockout"
+        android:layout_toStartOf="@+id/txtclockout"
+        android:src="@drawable/ic_clock_out_arrow" />
+
+    <TextView
+        android:id="@+id/txtclockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="2:00 PM"
+        android:textColor="@color/black_overlay"
+        />
+
+    <TextView
+        android:id="@+id/sumofinout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtclockout"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_toLeftOf="@+id/imgmessage"
+        android:layout_toStartOf="@+id/imgmessage"
+        android:text="4:00 Hrs"
+        android:textColor="@color/black_overlay"
+        />
+
+    <ImageView
+        android:id="@+id/imgmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:src="@drawable/ic_message"
+        />
+
+</RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>

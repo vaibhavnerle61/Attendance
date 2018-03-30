@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vaibhav.fuelpost.ProfileActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <ImageView
+        android:id="@+id/imgprofile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="77dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgprofilepicture"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginTop="27dp"
+        android:background="@color/whitecolor"
+        android:src="@drawable/melayerlogo"
+        app:layout_constraintBottom_toTopOf="@+id/txtdesignation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="296dp"
+        android:layout_marginEnd="10dp"
+        android:text="Rohan Mangaonkar"
+        android:textColor="@color/whitecolor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgprofilepicture"
+        app:layout_constraintTop_toBottomOf="@+id/imgprofilepicture"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/txtdesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="289dp"
+        android:layout_marginStart="12dp"
+        android:text="Graphics Designer"
+        android:textColor="@color/whitecolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtname"
+        app:layout_constraintTop_toBottomOf="@+id/imgprofilepicture"
+        android:layout_marginLeft="12dp" />
+
+
+    <TextView
+        android:id="@+id/txttextemailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
+        android:layout_marginStart="16dp"
+        android:text="Email ID -"
+        android:textColor="@color/prftextcolor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtemailid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgprofile"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/txtemailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="190dp"
+        android:layout_marginEnd="8dp"
+        android:text="melayer.rohan@gmail.com"
+        android:textColor="@color/prftextcolor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txttextemailid"
+        app:layout_constraintTop_toBottomOf="@+id/imgprofile"
+        android:layout_marginRight="8dp" />
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginBottom="171dp"
+        android:text="Birth data -"
+        android:textColor="@color/prftextcolor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txttextemailid"
+        app:layout_constraintTop_toBottomOf="@+id/imgprofile" />
+
+    <TextView
+        android:id="@+id/txtbirthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="19th July 1991"
+        android:textColor="@color/prftextcolor"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/txtemailid"
+        android:layout_marginLeft="10dp" />
+
+
+    <TextView
+        android:id="@+id/txttextmobno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Mobile No"
+        android:textColor="@color/prftextcolor"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtmobno"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        tools:ignore="MissingConstraints"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/txtmobno"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginBottom="127dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="127dp"
+        android:text="95337302472"
+        android:textColor="@color/prftextcolor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtbirthdate"
+        app:layout_constraintTop_toBottomOf="@+id/imgprofile"
+        tools:ignore="MissingConstraints"
+        android:layout_marginRight="13dp" />
+
+
+</android.support.constraint.ConstraintLayout>

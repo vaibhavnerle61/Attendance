@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#399e30</color>
+    <color name="colorPrimaryDark">#196c38</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="whitecolor">#ffffff</color>
+    <color name="toolbarcolor">#e9e6e6</color>
+    <color name="prftextcolor">#747171</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.example.vaibhav.fuelpost.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="231dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/melayerlogo"
+        app:layout_constraintBottom_toTopOf="@+id/txtmsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:hint="Username"
+        android:drawableRight="@drawable/ic_melayer_login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:hint="Password"
+        android:drawableRight="@drawable/ic_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
+
+
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@color/colorPrimary"
+        android:text="Login"
+        android:textColor="@color/whitecolor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <TextView
+        android:id="@+id/txtmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:text="Do't have an account ?Please contact HR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+</android.support.constraint.ConstraintLayout>
