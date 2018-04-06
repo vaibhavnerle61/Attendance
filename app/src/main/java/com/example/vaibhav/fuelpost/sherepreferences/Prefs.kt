@@ -17,15 +17,14 @@ class Prefs{
         fun saveEmpId(context: Context,empId:String){
 
             val sharedPreferences:SharedPreferences=context.getSharedPreferences(USER,Context.MODE_PRIVATE)
-
             val editor=sharedPreferences.edit()
-
             editor.putString(EMP_ID,empId).apply()
 
         }
 
 
         fun getEmpId(context: Context):String{
+
             val sharedPreferences:SharedPreferences=context.getSharedPreferences(USER,Context.MODE_PRIVATE)
             return sharedPreferences.getString(EMP_ID,null)
 

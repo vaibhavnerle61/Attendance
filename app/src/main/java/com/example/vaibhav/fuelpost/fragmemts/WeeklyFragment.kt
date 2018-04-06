@@ -21,9 +21,10 @@ class WeeklyFragment : Fragment() {
     }
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
+
         return inflater!!.inflate(R.layout.fragment_weekly, container, false)
     }
+
     companion object {
         fun newInstance():WeeklyFragment{
             val fragment=WeeklyFragment()
@@ -31,6 +32,4 @@ class WeeklyFragment : Fragment() {
         }
     }
 
-
-
-}// Required empty public constructor
+}

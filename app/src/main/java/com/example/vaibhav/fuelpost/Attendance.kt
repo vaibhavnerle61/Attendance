@@ -6,8 +6,10 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import com.example.vaibhav.fuelpost.fragmemts.CustomFragment
 import com.example.vaibhav.fuelpost.fragmemts.DailyFragment
 import com.example.vaibhav.fuelpost.fragmemts.MonthlyFragment
 import com.example.vaibhav.fuelpost.fragmemts.WeeklyFragment
@@ -16,12 +18,16 @@ import kotlinx.android.synthetic.main.activity_attendance.*
 import kotlinx.android.synthetic.main.app_bar_attendance.*
 
 class Attendance : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    val TAG:String="@codekul"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_attendance)
         setSupportActionBar(toolbar)
 
+        Log.i(TAG,"In attendance activity")
 
         val  qrScan =  IntentIntegrator(this)
 
@@ -45,15 +51,14 @@ class Attendance : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-            // Inflate the menu; this adds items to the action bar if it is present.
+
         menuInflater.inflate(R.menu.attendance, menu)
         return true
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
          return when (item.itemId) {
             R.id.daily -> {
                 val fragment=DailyFragment.newInstance()
@@ -70,6 +75,13 @@ class Attendance : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
              R.id.monthly ->{
 
                  val fragment=MonthlyFragment.newInstance()
+                 replaceFragment(fragment)
+                 true
+             }
+
+             R.id.custom ->{
+
+                 val fragment=CustomFragment.newInstance()
                  replaceFragment(fragment)
                  true
              }
@@ -112,7 +124,7 @@ class Attendance : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         return true
     }
 
-    private fun replaceFragment(fragment: android.support.v4.app.Fragment){
+       private fun replaceFragment(fragment: android.support.v4.app.Fragment){
 
 
         val fragmentTransaction= supportFragmentManager.beginTransaction()
@@ -121,4 +133,5 @@ class Attendance : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
      }
 
 
-    }
+
+ }

@@ -21,7 +21,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class QRCodeScanner : AppCompatActivity() {
+class   QRCodeScanner : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,10 +49,12 @@ class QRCodeScanner : AppCompatActivity() {
 
                     val empId=Prefs.getEmpId(applicationContext)
                     Log.i("@codekul","empId : $empId")
+
                     val apiService=ApiService.create()
                     val call=apiService.clockin(EmpClockStats(
                             empId,result.contents))
                     Log.i("@codekul","URL : ${call.request().url()}")
+
                     call.enqueue(object :Callback<EmpClockStatesResponse>{
                         override fun onFailure(call: Call<EmpClockStatesResponse>?, t: Throwable?) {
                             Log.i("@codekul","Error +${t?.message}")

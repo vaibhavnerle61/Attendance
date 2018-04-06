@@ -19,8 +19,15 @@ class CustomFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragment_monthly, container, false)
+        return inflater!!.inflate(R.layout.fragment_custom, container, false)
 
+    }
+
+    companion object {
+        fun newInstance():CustomFragment{
+            val fragment=CustomFragment()
+            return fragment
+        }
     }
 
 }// Required empty public constructor

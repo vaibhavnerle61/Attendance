@@ -21,12 +21,12 @@ class DailyAdapter(private val list:ArrayList<EmpClockStatesResponse>,val contex
     private val fragment:Fragment?=null
 
         override fun getItemCount(): Int {
-        return list.size
-    }
+            return list.size
+        }
 
     override fun onBindViewHolder(holder: DailyAdapter.ViewHolder?, position: Int) {
 
-holder?.setClockin_out()?.text="1"
+            holder?.setClockin_out()?.text="1"
 
     }
 
@@ -56,17 +56,10 @@ class ViewHolder(view: View):RecyclerView.ViewHolder(view){
 
 
     fun setClockin_out():TextView{
-         return  itemView.findViewById(R.id.txtclockin)
+        return   itemView.findViewById(R.id.txtclockin)
+
+
+
     }
-
 }
-
-
-
-
-
-
-
-
-
 }

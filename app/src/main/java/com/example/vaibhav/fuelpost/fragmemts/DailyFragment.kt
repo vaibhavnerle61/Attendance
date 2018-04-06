@@ -19,6 +19,9 @@ import com.example.vaibhav.fuelpost.rest.ApiService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import android.app.DatePickerDialog
+import java.util.*
+import kotlinx.android.synthetic.main.fragment_daily.*
 
 
 /**
@@ -28,23 +31,44 @@ class DailyFragment : Fragment() {
 
         val TAG:String="@codekul"
         private val item=ArrayList<MyDataClass>()
-
+        val cal = Calendar.getInstance()
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View?
+    {
 
         return inflater!!.inflate(R.layout.fragment_daily, container, false)
     }
-    companion object {
-        fun newInstance(): DailyFragment {
-            val fragment = DailyFragment()
-            return fragment
-        }// Required empty public constructor
-    }
+
+
+        companion object {
+            fun newInstance(): DailyFragment {
+                val fragment = DailyFragment()
+                return fragment
+            }
+        }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recycler()
+
+        val img=this.imgcalender
+
+        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfyear, dayOfmonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, monthOfyear)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfmonth)
+        }
+
+        imgcalender.setOnClickListener {
+            DatePickerDialog(activity,
+                    dateSetListener,
+                    cal.get(Calendar.YEAR),
+                    cal.get(Calendar.MONTH),
+                    cal.get(Calendar.DATE)).show()
+        }
+
+
     }
 
     private fun recycler(){
@@ -78,7 +102,6 @@ class DailyFragment : Fragment() {
 
 
 
-    })
 
 
 
@@ -115,6 +138,7 @@ class DailyFragment : Fragment() {
 
 
 
+})
 }
 }
 

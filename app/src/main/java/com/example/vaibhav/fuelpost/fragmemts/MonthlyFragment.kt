@@ -3,12 +3,14 @@ package com.example.vaibhav.fuelpost.fragmemts
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-
 import com.example.vaibhav.fuelpost.R
+import kotlinx.android.synthetic.main.monthly_record.*
+import com.example.vaibhav.fuelpost.adapter.ExpndableList
+
 
 
 /**
@@ -29,4 +31,21 @@ class MonthlyFragment : Fragment() {
             return fragment
         }
     }
-}// Required empty public constructor
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        Log.i("@codekul","oncreate")
+        val  listHeader = listOf("Number","fruits")
+
+        val numberList= listOf("one","two","three","four")
+
+        val fruitlist= listOf("Apple","Banana")
+
+        val listchild=HashMap<String,List<String>>()
+        listchild.put(listHeader[0],numberList)
+        listchild.put(listHeader[1],fruitlist)
+
+        explst.setAdapter(ExpndableList(context,listHeader,listchild))
+    }
+}

@@ -16,7 +16,7 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
 
 
-    private  val TAG="@codekul"
+    private val TAG = "@codekul"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,43 +31,38 @@ class MainActivity : AppCompatActivity() {
 
         val apiService = ApiService.create()
 
-        val call = apiService.login(EmpMaster(edtUserName.text.toString(),edtPassword.text.toString()))
-        Log.i(TAG,"URL: ${call.request().url()}")
-        call.enqueue(object : Callback<UserResponse>{
+        val call = apiService.login(EmpMaster(0,"","",edtUserName.text.toString(),edtPassword.text.toString(),""))
+        Log.i(TAG, "URL: ${call.request().url()}")
+        call.enqueue(object : Callback<UserResponse> {
 
             override fun onResponse(call: Call<UserResponse>?, response: Response<UserResponse>?) {
-                Log.i("@codekul","response : ${response!!.body()!!.message}")
+                Log.i("@codekul", "response : ${response!!.body()!!.message}")
 
 
 
-                if(response.code() == 200){
+                if (response.code() == 200) {
 
-                    if(response.body()?.status=="success"){
+                    if (response.body()?.status == "success") {
 
                         Prefs.saveEmpId(applicationContext, response.body()!!.result.empId)
 
-                        Log.i(TAG,"EmpId:${response.body()!!.result.empId}")
+                        Log.i(TAG, "EmpId:${response.body()!!.result.empId}")
 
 
-                        Log.i(TAG,"status : ${response.body()?.status}")
-                        val intent=Intent(applicationContext,Attendance::class.java)
+                        Log.i(TAG, "status : ${response.body()?.status}")
+                        val intent = Intent(applicationContext, Attendance::class.java)
                         startActivity(intent)
-                    }
-                    else Log.i(TAG,"status : ${response.body()?.status}")
+                    } else Log.i(TAG, "status : ${response.body()?.status}")
                 }
 
             }
 
             override fun onFailure(call: Call<UserResponse>?, t: Throwable?) {
-                Log.i(TAG,"error : ${t?.message}")
+                Log.i(TAG, "error : ${t?.message}")
             }
         })
 
     }
-
-
-
-
 }
 
 

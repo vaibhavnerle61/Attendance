@@ -29,12 +29,8 @@ interface ApiService {
     @POST("emp")
     fun register(@Body empMaster: EmpMaster): Call<UserResponse>
 
-
-
-
     @POST("empclockstats")
     fun clockin(@Body empClockStats: EmpClockStats):Call<EmpClockStatesResponse>
-
 
 
     companion object {
